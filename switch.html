@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:black;
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+        #switch-design{
+            width: 44px;
+            border: 2px solid red;
+            height: 20px;
+            border-radius: 30px;
+            background-color: white;
+            position:relative;
+        }
+        input[type="checkbox"]{
+            display: none;
+        }
+        input:checked + label #switch-button{
+            right:0px;
+            transition:1s ease-in-out;
+            
+        }
+        input:checked + label #switch-design{
+            background-color: greenyellow;
+            transition:0.3s ease-in-out;
+            
+        }
+        #switch-button{
+            border:1px solid black;
+            background-color:black;
+            width:19px;
+            height:18px;
+            border-radius: inherit;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="switch" id="switch" >
+    <label for="switch" >
+        <div id="switch-design">
+            <div id="switch-button"></div>
+        </div>
+    </label>
+</body>
+</html>
